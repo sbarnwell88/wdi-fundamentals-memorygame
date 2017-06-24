@@ -79,5 +79,14 @@ footer {
 }
 a:hover {
 	border-color: #FFFFFF;
-	color: pink;
+}
+button {
+	padding: 10px;
+	margin-top: 20px;
+	font-size: 20px;
+	background-color: #F15B31;
+	color: white;
+}
+.social {
+	letter-spacing: -1px;
 }

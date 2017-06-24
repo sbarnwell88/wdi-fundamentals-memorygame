@@ -47,8 +47,18 @@ var createBoard = function () {
 		var cardElement = document.createElement('img');
 		cardElement.setAttribute('src', 'images/back.png');
 		cardElement.setAttribute('data-id', i);
+		cardElement.setAttribute('id', 'card-' + i);
 		cardElement.addEventListener('click', flipCard);
 		document.getElementById('game-board').appendChild(cardElement);
 	}
 }
+var reset = function () {
+	var cardElement;
+	for (var i = 0; i < cards.length; i++) {
+		cardElement = document.getElementById('card-' + i);
+		cardElement.setAttribute('src', 'images/back.png');
+	}
+	cardsInPlay = [];
+}
+document.querySelector('button').addEventListener('click', reset);
 createBoard();
